@@ -1,0 +1,109 @@
+name: myapp
+
+services:
+  ALL:
+    # Basic info
+    image:
+    build:
+    container_name:
+    hostname:
+    privileged:
+
+    # Permissions
+    user:
+    network_mode:
+    networks:
+    cap_add:
+    cap_drop:
+    security_opt:
+
+    # Configuration
+    environment:
+    volumes:
+    expose:
+    ports:
+    devices:
+    device_cgroup_rules:
+
+    # Controls
+    depends_on:
+    shm_size:
+    restart:
+
+    annotations:
+    attach:
+    blkio_config:
+    cpu_count:
+    cpu_percent:
+    cpu_shares:
+    cpu_period:
+    cpu_quota:
+    cpu_rt_runtime:
+    cpu_rt_period:
+    cpus:
+    cpuset:
+    cgroup:
+    cgroup_parent:
+    command:
+    configs:
+    credential_spec:
+    deploy:
+    develop:
+    dns:
+    dns_opt:
+    dns_search:
+    domainname:
+    driver_opts:
+    entrypoint:
+    env_file:
+    extends:
+    external_links:
+    extra_hosts:
+    gpus:
+    group_add:
+    healthcheck:
+    init:
+    ipc:
+    isolation:
+    labels:
+    label_file:
+    links:
+    logging:
+    mac_address:
+    mem_limit:
+    mem_reservation:
+    mem_swappiness:
+    memswap_limit:
+    models:
+    oom_kill_disable:
+    oom_score_adj:
+    pid:
+    pids_limit:
+    platform:
+    post_start:
+    pre_stop:
+    profiles:
+    provider:
+    pull_policy:
+    read_only:
+    runtime:
+    scale:
+    secrets:
+    stdin_open:
+    stop_grace_period:
+    stop_signal:
+    storage_opt:
+    sysctls:
+    tmpfs:
+    tty:
+    ulimits:
+    use_api_socket:
+    userns_mode:
+    uts:
+    volumes_from:
+    working_dir:
+
+networks:
+volumes:
+configs:
+secrets:
