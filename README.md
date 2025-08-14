@@ -2,7 +2,21 @@
 
 docker-compose-sort reorders the lines in `docker-compose.yml` to conform to a specific predetermined order. It's like [isort](https://pycqa.github.io/isort/) for [Docker Compose](https://docs.docker.com/compose/). Comments are preserved.
 
-The Docker Compose order enforced by this project is inspired by the order used in [Compose file reference | Docker](https://docs.docker.com/reference/compose-file/) and [LinuxServer.io](https://www.linuxserver.io/), although neither follow a consistent order themselves.
+The Docker Compose order enforced by this project via `template.yaml` is inspired by the order used in [Compose file reference | Docker](https://docs.docker.com/reference/compose-file/) and [LinuxServer.io](https://www.linuxserver.io/), although neither follow a consistent order themselves.
+
+## Installation
+
+This package is is not yet published on [PyPI](https://pypi.org/). To install:
+```
+$ git clone https://github.com/k4j8/docker-compose-sort.git
+$ pip install --editable docker-compose-sort/
+```
+
+Installing with `editable` above allows for easy updates like so:
+```
+$ cd docker-compose-sort/
+$ git pull
+```
 
 ## Usage
 
