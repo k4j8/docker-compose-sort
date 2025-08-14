@@ -5,6 +5,7 @@ services:
     # Basic info
     image:
     build:
+    command:
     container_name:
     hostname:
     privileged:
@@ -15,6 +16,9 @@ services:
     networks:
     cap_add:
     cap_drop:
+    deploy:
+      mode:
+      replicas:
     security_opt:
 
     # Configuration
@@ -27,6 +31,13 @@ services:
 
     # Controls
     depends_on:
+    healthcheck:
+      test:
+      interval:
+      timeout:
+      retries:
+      start_period:
+      start_interval:
     shm_size:
     restart:
 
@@ -44,10 +55,8 @@ services:
     cpuset:
     cgroup:
     cgroup_parent:
-    command:
     configs:
     credential_spec:
-    deploy:
     develop:
     dns:
     dns_opt:
@@ -61,7 +70,6 @@ services:
     extra_hosts:
     gpus:
     group_add:
-    healthcheck:
     init:
     ipc:
     isolation:
@@ -104,6 +112,26 @@ services:
     working_dir:
 
 networks:
+  ALL:
+    internal:
+    external:
+    name:
+    driver:
+    driver_opts:
+    enable_ipv4:
+    enable_ipv6:
+    attachable:
+    ipam:
+    labels:
+    
 volumes:
+  ALL:
+    external:
+    name:
+    driver:
+    driver_opts:
+    labels:
+
 configs:
+
 secrets:
