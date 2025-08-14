@@ -49,8 +49,15 @@ Pull requests are welcome as well, but please open an issue first describing the
 - Packaging: [Python Packaging User Guide](https://packaging.python.org/), [setuptools](https://setuptools.pypa.io/en/latest/index.html#)
 - Release versioning: [Semantic Versioning](https://semver.org/)
 
-## Similar Projects
+## Comparison to Similar Projects
 
-- [yaml-compose-sorter](https://github.com/SashaBusinaro/yaml-compose-sorter): Same as this project, but is a VS Code extension, sort order is controlled in the code rather than a template, and does not support nested sort orders where the sort order depends on the parent
-- [dockerComposeSort](https://github.com/Jeshuah71/dockerComposeSort): Same as this project, but sorts alphabetically instead of to a template
-- [Docker Compose Linter](https://github.com/zavoloklom/docker-compose-linter): Detects errors in Docker Compose rather than sorting the elements
+| Feature             | docker-compose-sort (this package) | [yaml-compose-sorter] | [compose_format] | [dockerComposeSort]     | [Docker Compose Linter] |
+| ------------------- | ---------------------------------- | --------------------- | ---------------- | ----------------------- | ----------------------- |
+| Sorting method      | ✅ YAML template                   | Defined in code       | Defined in code  | Alphabetically          | n/a                     |
+| Levels of sorting   | ✅ All                             | Top level + Services  | Top 2 levels     | All, but alphabetically | n/a                     | 
+| Installation method | pip                                | VS Code               | pip, Docker      | Python                  | Node.js, Docker, NPM    |
+
+[yaml-compose-sorter]: https://github.com/SashaBusinaro/yaml-compose-sorter
+[compose_format]: https://github.com/funkwerk/compose_format
+[dockerComposeSort]: https://github.com/Jeshuah71/dockerComposeSort
+[Docker Compose Linter]: https://github.com/zavoloklom/docker-compose-linter
