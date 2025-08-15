@@ -3,10 +3,10 @@ name:
 services:
   ALL:
     # Basic info
+    container_name:
     image:
     build:
     command:
-    container_name:
     hostname:
     privileged:
 
@@ -25,6 +25,9 @@ services:
     environment:
     volumes:
     expose:
+    extends:
+      file:
+      service:
     ports:
     devices:
     device_cgroup_rules:
@@ -65,7 +68,6 @@ services:
     driver_opts:
     entrypoint:
     env_file:
-    extends:
     external_links:
     extra_hosts:
     gpus:
