@@ -22,17 +22,18 @@ $ git pull
 
 The following is given from `docker-compose-sort --help`:
 ```
-usage: docker-compose-sort [-h] [--write] [filepath]
+usage: docker-compose-sort [-h] [--diff] [--pager PAGER] [--write] [filepath]
 
-Opinionated sort for restructuring Docker Compose YAML sections to a standardized order. By default, output is
-written to stdout.
+Opinionated sort for restructuring Docker Compose YAML sections to a standardized order. By default, output is written to stdout.
 
 positional arguments:
-  filepath    Path to file to format
+  filepath       Path to file to format
 
 options:
-  -h, --help  show this help message and exit
-  --write     Edit file in-place
+  -h, --help     show this help message and exit
+  --diff         show diff
+  --pager PAGER  select diff pager
+  --write        edit file in-place
 ```
 
 ## Contributing
