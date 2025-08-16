@@ -30,9 +30,16 @@ def reorder_yaml_by_template(template_path: str, data_path: str) -> None:
     with open(data_path, "r") as f:
         data = yaml.load(f)
 
+    def move_key_to_end(data_node, key):
+        val = data_node.pop(key)
+        data_node[key] = val  # reinsert at end in correct order
+        return val
+
     def reorder_in_place(template_node: Any, data_node: CommentedMap) -> None:
         # If parent is not defined in template, do not sort
         if not isinstance(template_node, CommentedMap):
+            for key in sorted(data_node):
+                move_key_to_end(data_node, key)
             return
 
         wildcard_template = None
@@ -46,8 +53,7 @@ def reorder_yaml_by_template(template_path: str, data_path: str) -> None:
         # Reorder keys in place without losing comments
         for key in desired_keys:
             if key in data_node:
-                val = data_node.pop(key)
-                data_node[key] = val  # reinsert at end in correct order
+                val = move_key_to_end(data_node, key)
                 if isinstance(val, CommentedMap):
                     # If it is a dictionary, sort through its keys (recursion)
                     reorder_in_place(template_node.get(key, wildcard_template), val)
