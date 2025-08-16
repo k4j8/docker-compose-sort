@@ -99,8 +99,8 @@ def main():
     parser.add_argument(
         "filepath",
         nargs="?",
-        default="docker-compose.yml",
-        help="Path to file to format",
+        default="compose.yaml",
+        help="Path to file to format, defaults to `compose.yaml` if not specified",
     )
     parser.add_argument("--diff", action="store_true", help="show diff")
     parser.add_argument("--pager", help="select diff pager")

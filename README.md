@@ -1,6 +1,6 @@
 # docker-compose-sort
 
-docker-compose-sort reorders the lines in `docker-compose.yml` to conform to a specific predetermined order. It's like [isort](https://pycqa.github.io/isort/) for [Docker Compose](https://docs.docker.com/compose/). Comments are preserved.
+docker-compose-sort reorders the lines in `compose.yaml` to conform to a specific predetermined order. It's like [isort](https://pycqa.github.io/isort/) for [Docker Compose](https://docs.docker.com/compose/). Comments are preserved.
 
 The Docker Compose order enforced by this project via `template.yaml` is inspired by the order used in [Compose file reference | Docker](https://docs.docker.com/reference/compose-file/) and [LinuxServer.io](https://www.linuxserver.io/), although neither follow a consistent order themselves.
 
@@ -27,7 +27,7 @@ usage: docker-compose-sort [-h] [--diff] [--pager PAGER] [--write] [filepath]
 Opinionated sort for restructuring Docker Compose YAML sections to a standardized order. By default, output is written to stdout.
 
 positional arguments:
-  filepath       Path to file to format
+  filepath       Path to file to format, defaults to `compose.yaml` if not specified
 
 options:
   -h, --help     show this help message and exit
