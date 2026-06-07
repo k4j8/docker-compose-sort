@@ -7,6 +7,7 @@ services:
     image:
     build:
     command:
+    entrypoint:
     hostname:
     privileged:
 
@@ -34,6 +35,7 @@ services:
 
     # Controls
     depends_on:
+    logging:
     healthcheck:
       test:
       interval:
@@ -66,7 +68,6 @@ services:
     dns_search:
     domainname:
     driver_opts:
-    entrypoint:
     env_file:
     external_links:
     extra_hosts:
@@ -78,7 +79,6 @@ services:
     labels:
     label_file:
     links:
-    logging:
     mac_address:
     mem_limit:
     mem_reservation:
