@@ -15,7 +15,7 @@ authors = [
 description = "Reorder lines in Docker Compose files to conform to a specific predetermined order"
 readme = "README.md"
 license = "MIT"
-license-files = ["LICENCSE"]
+license-files = ["LICENSE"]
 classifiers = [
     "Natural Language :: English",
     "Operating System :: OS Independent",
